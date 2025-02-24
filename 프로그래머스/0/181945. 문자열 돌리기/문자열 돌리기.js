@@ -7,10 +7,7 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on('line', function (line) {
-    input = [line];
+    input = [...line];
 }).on('close',function(){
-    str = input[0];
-    for (let i in str) {
-        console.log(str[i]);
-    }
+    console.log(input.join('\n'))
 });
