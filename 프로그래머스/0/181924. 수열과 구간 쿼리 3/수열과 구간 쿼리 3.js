@@ -1,7 +1,7 @@
 function solution(arr, queries) {
-    for (let [i, j] of queries) {
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-}
+    queries.forEach(([a, b]) => {
+        [arr[a], arr[b]] = [arr[b], arr[a]]
+    })
     return arr;
 }
     
