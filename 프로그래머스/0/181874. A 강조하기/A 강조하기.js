@@ -1,3 +1,7 @@
 function solution(myString) {
-    return [...myString].map(v => v === 'a' || v ==='A' ? v.toUpperCase() : v.toLowerCase()).join('');
+    return [...myString].map(v => {
+        if (v === 'a' || v === 'A') return 'A';
+        if (v >= 'A' && v <= 'Z') return v.toLowerCase();
+        return v;
+    }).join('');
 }
