@@ -1,13 +1,13 @@
 function solution(binomial) {
-    const a = Number(binomial.split(' ')[0]);
-    const op = binomial.split(' ')[1];
-    const b = Number(binomial.split(' ')[2]);
+    const [a, op, b] = binomial.split(' ');
+    const num1 = Number(a);
+    const num2 = Number(b);
     
-    if (op === '+') {
-        return a + b;
-        } else if ( op === '-') {
-        return a - b;
-        } else if ( op === '*') {
-        return a * b;
-     }
+    const operations = {
+        '+': (x, y) => x + y,
+        '-': (x, y) => x - y,
+        '*': (x, y) => x * y
+    };
+    
+    return operations[op](num1, num2);
 }
