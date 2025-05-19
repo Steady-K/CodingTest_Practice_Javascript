@@ -1,9 +1,10 @@
 function solution(strArr) {
-    const lengthMap = {};
+    const map = new Map();
     
-    for (let str of strArr) {
+    strArr.forEach(str => {
         const len = str.length;
-        lengthMap[len] = (lengthMap[len] || 0) + 1;
-    }
-    return Math.max(...Object.values(lengthMap));
+        map.set(len, (map.get(len) || 0) + 1)
+    });
+    
+    return Math.max(...map.values());
 }
