@@ -1,0 +1,1 @@
+const solution = (o) => o.reduce((acc, cur) => acc + (cur.includes('cafelatte') ? 5000 : 4500), 0)
