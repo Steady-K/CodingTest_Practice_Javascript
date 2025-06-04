@@ -1,7 +1,6 @@
 function solution(n) {
-    let pizza = 1;
-    while((pizza * 6) % n !== 0) {
-        pizza++
-    }
-    return pizza;
+    const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+    const lcm = (a, b) => (a * b) / gcd(a, b)
+    
+    return lcm(6, n) / 6;
 }
