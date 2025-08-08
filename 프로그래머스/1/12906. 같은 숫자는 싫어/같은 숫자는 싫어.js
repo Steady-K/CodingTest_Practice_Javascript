@@ -1,14 +1,10 @@
 function solution(arr)
-{
-    const oneArr = [];
-    let prev = arr[0]
-    oneArr.push(prev)
+
+{   if(arr.length === 0) return []
+    const result = [arr[0]];
     
     for(let i = 1; i < arr.length; i++) {
-        if(prev !==arr[i]) {
-            oneArr.push(arr[i])
-            prev = arr[i]
-        }
+        if(arr[i] !== arr[i - 1]) result.push(arr[i])
     }
-    return oneArr;
+    return result;
 }
