@@ -13,7 +13,7 @@ function solution(bridge_length, weight, truck_weights) {
         if(i < truck_weights.length && currentWeight + truck_weights[i] <= weight) {
             bridge.push(truck_weights[i]);
             currentWeight += truck_weights[i];
-            i++
+            i++;
         } else {
             bridge.push(0);
         }
