@@ -1,15 +1,13 @@
 function solution(num_list) {
-    let OddSum = 0;
-    let EvenSum = 0;
-    
-    for (let i = 0; i < num_list.length; i++) {
-        if (num_list[i] % 2 !== 0) {
-            OddSum += num_list[i].toString();
+    const numLen = num_list.length;
+    let onlyOddNum = ''
+    let onlyEvenNum = ''
+    for(let i = 0; i < numLen; i++) {
+        if(num_list[i] % 2 !== 0) {
+            onlyOddNum += `${num_list[i]}`
         } else {
-            if (num_list[i] % 2 === 0) {
-                EvenSum += num_list[i].toString();
-            }
+            onlyEvenNum += `${num_list[i]}`
         }
     }
-    return Number(OddSum) + Number(EvenSum);
+    return Number(onlyOddNum) + Number(onlyEvenNum)
 }
