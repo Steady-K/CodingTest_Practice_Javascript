@@ -9,8 +9,8 @@ function solution(park, routes) {
         S : [1, 0],
         N : [-1, 0]
     }
-    
- let y = 0;
+    let x = 0;
+    let y = 0;
 
     for (let i = 0; i < h; i++) {
         const j = park[i].indexOf("S");
