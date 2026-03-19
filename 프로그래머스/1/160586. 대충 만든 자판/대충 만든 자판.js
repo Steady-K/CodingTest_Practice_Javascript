@@ -7,7 +7,7 @@ function solution(keymap, targets) {
         
         for (let i = 0; i < target.length; i++) {
             const char = target[i]
-            let minPush = 101
+            let minPush = Infinity
             
             keymap.forEach((key) => {
                 const idx = key.indexOf(char)
@@ -16,7 +16,7 @@ function solution(keymap, targets) {
                 }
             })
             
-            if(minPush === 101) {
+            if(minPush === Infinity) {
                 possible = false
                 break
             }
